@@ -1,0 +1,84 @@
+/*
+Theme Name: Guido-plomberie
+Text Domain: guido-plomberie
+Version: 1.0
+Requires at least: 5.2
+Requires PHP: 7.4
+Description: Thème développé par Kevin Capoccetti dans le but d'alléger les temps de chargrement en utilisant que le stricte nécessaire aux besoins des utilisateurs. Ce thème respecte les standards en matière de SEO, il est maintenable et évolutif.
+Author: Kevin Capoccetti
+Author URI: https://colorweb.fr/
+Theme URI: https://colorweb.fr/
+*/
+
+/* --------------------------------------------------------------------------------------------*/
+/*-------------------------------------- The Custom Css ---------------------------------------*/
+/*---------------------------------------------------------------------------------------------*/
+
+
+
+/* Generale */
+* {box-sizing: border-box;}
+body {margin: 0 auto;font-family: 'Raleway', sans-serif;overflow-x: hidden;}
+a {text-decoration: none;}
+ul li { list-style-type: none;}
+img {max-width:100%;}
+.Main_container {overflow-x: hidden;}
+.Main_container p, .Main_container a, .Main_container li, .Main_container span {font-size: 16px;line-height: 1.3;}
+.Main_container h1 {font-size: 62px;line-height: 1.2;font-family: 'Raleway', sans-serif;}
+.Main_container h2 {font-size: 30px;line-height: 1.2;font-family: 'Raleway', sans-serif;}
+.Main_container h3, .Main_container h4, .Main_container h5, .Main_container h6 {font-size: 24px;line-height: 1.2;font-family: 'Raleway', sans-serif;}
+.admin-bar .menu {top: 32px; /* on prend en compte le décalage */}
+.container {max-width: 1200px;margin: 0 auto;padding-left: 15px;padding-right: 15px;}
+
+/* Header */
+.header {position: relative;top: 0px;width: 100%;height: 86px;background: #199EB8;z-index:999;}
+.home .header {top: 0px;width: 100%;height: 86px;background: #199EB8;z-index:999;transition: .2s ease-in-out;}
+.containerNav {max-width: 1200px;margin: 0 auto;width: 100%;}
+.menu-item a {text-decoration: none;color:#ffffff;font-size: 14px;}
+
+/* RS Header Responsive */
+@media only screen and (max-width:1280px){
+
+}
+
+/* Sous 1024px */
+@media only screen and (max-width: 1024px){
+   
+}
+
+/* Au dessus de 865px */
+@media only screen and (min-width: 865px){
+    /* Menu */
+    ul#menu-menu-principale>li::after {content: " ";position: absolute;width: 0%;border-bottom: solid 2px #f07e13;bottom: 0;left: 0;transition: .2s ease-in-out;}
+    ul#menu-menu-principale>li:hover::after{width: 100%}
+    ul#menu-menu-principale>li{position: relative;}
+    .btnBurgerMenu{display: none;}
+    nav.menuHeader, ul#menu-menu-principale {display: inline-block;padding-left: 0;margin-bottom: 0;}
+    .menu-item {display: inline-block;vertical-align: top;margin: 0px 13px;}
+    ul.sub-menu li, .rs_head {display: block;}
+    ul.sub-menu {display: none;background: #141412;padding: 15px 15px;position: absolute;}
+    .menu-item-has-children:hover>ul.sub-menu {display: block;}
+    nav.menuHeader {float: right;position: relative;top: 32px;}
+    .menu-item-has-children:hover>ul {padding-top: 20px;}
+}
+
+/* Tablette Burger et autres */
+@media only screen and (max-width: 864px){
+    /* Menu */
+    .btnBurgerMenu {position: absolute;right: 30px;top: 6px;padding: 15px;color: #ffffff;cursor: pointer;}
+    span.buger1 {transform: rotate(90deg);transition: .2s ease-in-out;display: block;position:absolute;top:0;font-size: 35px;}
+    span.buger2 {transform: rotate(90deg);transition: .2s ease-in-out;display: block;position: absolute;top: 13px;font-size: 35px;}
+    span.buger3 {transform: rotate(90deg);transition: .2s ease-in-out;display: block;position: absolute;top: 25px;font-size: 35px;}
+    nav.menuHeader {height: 100vh;float: none;position: absolute;background: #944465;top: 86px;left: -300px;width: 300px;transition: .2s ease-in-out;}
+    .menu-item a {line-height: 24px;padding: 8px 0px;font-size: 16px;width: 100%; position: relative; margin: 5px 0px;display: block;}
+}
+
+/* Tablette standart */
+@media only screen and (max-width: 768px){
+
+}
+
+/* Mobile */
+@media only screen and (max-width: 580px){
+    nav.menuHeader {width: 100%;left:-100%;}
+}
