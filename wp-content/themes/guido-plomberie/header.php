@@ -14,13 +14,11 @@
 
     <header class="header">
         <div class="containerNav container">
-            <a href="<?php echo home_url('/'); ?>">
-                <?php
-                if (function_exists('the_custom_logo')) {
-                    the_custom_logo();
-                }
-                ?>
-            </a>
+            <?php
+            if (function_exists('the_custom_logo')) {
+                the_custom_logo();
+            }
+            ?>
             <div class="btnBurgerMenu">
                 <span class="buger1">|</span>
                 <span class="buger2">|</span>
