@@ -2,62 +2,65 @@
 
 <!-- ======= Hero Section ======= -->
 <section id="hero" class="hero">
-    <div class="container text-center">
+    <div class="container text-left">
         <div class="row">
-            <div class="col-md-12">
-                <h1>
-                    GUIDO PLOMBERIE
-                </h1>
-    
-                <p class="tagline">
-                    Dépannage, création, installation, conseils ...<br>
-                    Contactez Guido Plomberie !
-                </p>
-                <a class="btn btn-full scrollto" href="#about">Get Started Now</a>
+            <div class="col-md-6 col-xs-12">
+                <div class="content-hero-left">
+                    <h1>
+                        GUIDO PLOMBERIE
+                    </h1>
+                    <a class="tel-hero-home" href="tel:+33619387998"><i class="fa-solid fa-phone"></i> +33 619 387 998</a>
+                    <p class="tagline">
+                        Dépannage, création, <br>installation, conseils, <br>recherche de fuite ...<br>
+                        Contactez Guido Plomberie !
+                    </p>
+                    <a class="btn btn-full scrollto" href="#prestations">Voir les prestations</a>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="content-hero-right">
+                    <h2>Demandez un devis</h2>
+                    <?= do_shortcode('[contact-form-7 id="14" title="Demander un devis"]'); ?>
+                </div>
             </div>
         </div>
     </div>
 </section><!-- End Hero -->
 
 <!-- ======= About Section ======= -->
-<section class="about" id="about">
+<section class="about" id="prestations">
 
     <div class="container text-center">
         <h2>
-            About Bell Template
+            Les services Guido plomberie
         </h2>
-
-        <p>
-            Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, per nihil dicant commodo an. Eum tacimates erroribus ad. Atqui feugiat euripidis ea pri, sed veniam tacimates ex. Menandri
-            temporibus an duo.
-        </p>
-
+        <p>Vous avez besoin d'un devis, un conseil ou vous avez une urgence ?<br>Guido plomberie intervient sur tous le bassins niçois et alentours !</p>
         <div class="row stats-row">
             <div class="stats-col text-center col-md-3 col-sm-6">
                 <div class="circle">
-                    <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter stats-no"></span>
-                    Satisfied Customers
+                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-phone"></i></span></a>
+                    Installation & remplacement
                 </div>
             </div>
 
             <div class="stats-col text-center col-md-3 col-sm-6">
                 <div class="circle">
-                    <span data-purecounter-start="0" data-purecounter-end="79" data-purecounter-duration="1" class="purecounter stats-no"></span>
-                    Released Projects
+                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-phone"></i></span></a>
+                    Recherche de fuites
                 </div>
             </div>
 
             <div class="stats-col text-center col-md-3 col-sm-6">
                 <div class="circle">
-                    <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter stats-no"></span>
-                    Hours Of Support
+                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-phone"></i></span></a>
+                    Débouchages & dépannages
                 </div>
             </div>
 
             <div class="stats-col text-center col-md-3 col-sm-6">
                 <div class="circle">
-                    <span data-purecounter-start="0" data-purecounter-end="68" data-purecounter-duration="1" class="purecounter stats-no"></span>
-                    Hard Workers
+                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-phone"></i></span></a>
+                    Robineteries, Chauffe eau, Cumulus
                 </div>
             </div>
         </div>
@@ -66,179 +69,35 @@
 </section><!-- End About Section -->
 
 <!-- ======= Welcome Section ======= -->
-<section class="welcome text-center">
-    <h2>Welcome to a perfect theme</h2>
-    <p>
-        This is the most powerful theme with thousands of options that you have never seen before.
-    </p>
-    <img alt="Bell - A perfect theme" class="gadgets-img hidden-md-down" src="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/gadgets.png">
+<section class="welcome text-left">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <div class="content-about-home-L">
+                    <h2>Qui sommes nous ?</h2>
+                    <p>This is the most powerful theme with thousands of options that you have never seen before.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <div class="content-about-home-R">
+                    <img alt="Robineterie Guido Jim" class="robinet-mid-section" src="/guido-plomberie/wp-content/uploads/2022/11/Robineterie.png">
+                </div>
+            </div>
+        </div>
+    </div>
 </section><!-- End Welcome Section -->
-
-<!-- ======= Features Section ======= -->
-<section class="features" id="features">
-
-    <div class="container">
-        <h2 class="text-center">
-            Features
-        </h2>
-
-        <div class="row">
-            <div class="feature-col col-lg-4 col-xs-12">
-                <div class="card card-block text-center">
-                    <div>
-                        <div class="feature-icon">
-                            <i class="bi bi-briefcase"></i>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3>
-                            Custom Design
-                        </h3>
-
-                        <p>
-                            Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="feature-col col-lg-4 col-xs-12">
-                <div class="card card-block text-center">
-                    <div>
-                        <div class="feature-icon">
-                            <i class="bi bi-card-checklist"></i>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3>
-                            Responsive Layout
-                        </h3>
-
-                        <p>
-                            Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="feature-col col-lg-4 col-xs-12">
-                <div class="card card-block text-center">
-                    <div>
-                        <div class="feature-icon">
-                            <i class="bi bi-bar-chart"></i>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3>
-                            Innovative Ideas
-                        </h3>
-
-                        <p>
-                            Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="feature-col col-lg-4 col-xs-12">
-                <div class="card card-block text-center">
-                    <div>
-                        <div class="feature-icon">
-                            <i class="bi bi-binoculars"></i>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3>
-                            Good Documentation
-                        </h3>
-
-                        <p>
-                            Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="feature-col col-lg-4 col-xs-12">
-                <div class="card card-block text-center">
-                    <div>
-                        <div class="feature-icon">
-                            <i class="bi bi-brightness-high"></i>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3>
-                            Excellent Features
-                        </h3>
-
-                        <p>
-                            Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="feature-col col-lg-4 col-xs-12">
-                <div class="card card-block text-center">
-                    <div>
-                        <div class="feature-icon">
-                            <i class="bi bi-calendar4-week"></i>
-                        </div>
-                    </div>
-
-                    <div>
-                        <h3>
-                            Retina Ready
-                        </h3>
-                        <p>
-                            Eque feugiat contentiones ei has. Id summo mundi explicari his, nec in maiorum scriptorem.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</section><!-- End Features Section -->
-
-<!-- ======= Call to Action Section ======= -->
-<section class="cta">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-9 col-sm-12 text-lg-start text-center">
-                <h2>
-                    Call to Action Section
-                </h2>
-
-                <p>
-                    Lorem ipsum dolor sit amet, nec ad nisl mandamus imperdiet, ut corpora cotidieque cum. Et brute iracundia his, est eu idque dictas gubergren
-                </p>
-            </div>
-
-            <div class="col-lg-3 col-sm-12 text-lg-right text-center">
-                <a class="btn btn-ghost" href="#">Buy This Template</a>
-            </div>
-        </div>
-    </div>
-</section><!-- End Call to Action Section -->
 
 <!-- ======= Portfolio Section ======= -->
 <section class="portfolio" id="portfolio">
 
     <div class="container text-center">
         <h2>
-            Portfolio
+            Quelques réalisations
         </h2>
 
         <p>
-            Voluptua scripserit per ad, laudem viderer sit ex. Ex alia corrumpit voluptatibus usu, sed unum convenire id. Ut cum nisl moderatius, Per nihil dicant commodo an.
+            Au delà de l'utile, mon métier me permet de réaliser et concevoir des pièces d'eaux aussi pratique qu'agréable à vivre<br>
+            et la satisfaction du client est un vrai moteur dans mon métier.
         </p>
     </div>
 
@@ -393,112 +252,22 @@
     </div>
 </section><!-- End Portfolio Section -->
 
-<!-- ======= Team Section ======= -->
-<section class="team" id="team">
+<!-- ======= Call to Action Section ======= -->
+<section class="cta">
     <div class="container">
-        <h2 class="text-center">
-            Meet our team
-        </h2>
-
-        <div class="row">
-            <div class="col-sm-3 col-xs-6">
-                <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/team-1.jpg">
-                        <div class="card-title-wrap">
-                            <span class="card-title">Sergio Fez</span> <span class="card-text">Art Director</span>
-                        </div>
-
-                        <div class="team-over">
-                            <h4 class="hidden-md-down">
-                                Connect with me
-                            </h4>
-
-                            <nav class="social-nav">
-                                <a href="#"><i class="bi bi-twitter"></i></a> <a href="#"><i class="bi bi-facebook"></i></a> <a href="#"><i class="bi bi-linkedin"></i></a> <a href="#"><i class="bi bi-envelope-fill"></i></a>
-                            </nav>
-
-                            <p>
-                                Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                            </p>
-                        </div>
-                    </a>
-                </div>
+        <div class="row cta-flex-home">
+            <div class="col-lg-9 col-sm-12 text-lg-start text-center">
+                <h2>
+                    Vous avez besoins d'un devis pour une réalisation
+                </h2>
             </div>
 
-            <div class="col-sm-3 col-xs-6">
-                <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/team-2.jpg">
-                        <div class="card-title-wrap">
-                            <span class="card-title">Sergio Fez</span> <span class="card-text">Art Director</span>
-                        </div>
-
-                        <div class="team-over">
-                            <h4 class="hidden-md-down">
-                                Connect with me
-                            </h4>
-
-                            <nav class="social-nav">
-                                <a href="#"><i class="bi bi-twitter"></i></a> <a href="#"><i class="bi bi-facebook"></i></a> <a href="#"><i class="bi bi-linkedin"></i></a> <a href="#"><i class="bi bi-envelope-fill"></i></a>
-                            </nav>
-
-                            <p>
-                                Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/team-3.jpg">
-                        <div class="card-title-wrap">
-                            <span class="card-title">Sergio Fez</span> <span class="card-text">Art Director</span>
-                        </div>
-
-                        <div class="team-over">
-                            <h4 class="hidden-md-down">
-                                Connect with me
-                            </h4>
-
-                            <nav class="social-nav">
-                                <a href="#"><i class="bi bi-twitter"></i></a> <a href="#"><i class="bi bi-facebook"></i></a> <a href="#"><i class="bi bi-linkedin"></i></a> <a href="#"><i class="bi bi-envelope-fill"></i></a>
-                            </nav>
-
-                            <p>
-                                Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                            </p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-sm-3 col-xs-6">
-                <div class="card card-block">
-                    <a href="#"><img alt="" class="team-img" src="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/team-4.jpg">
-                        <div class="card-title-wrap">
-                            <span class="card-title">Sergio Fez</span> <span class="card-text">Art Director</span>
-                        </div>
-
-                        <div class="team-over">
-                            <h4 class="hidden-md-down">
-                                Connect with me
-                            </h4>
-
-                            <nav class="social-nav">
-                                <a href="#"><i class="bi bi-twitter"></i></a> <a href="#"><i class="bi bi-facebook"></i></a> <a href="#"><i class="bi bi-linkedin"></i></a> <a href="#"><i class="bi bi-envelope-fill"></i></a>
-                            </nav>
-
-                            <p>
-                                Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                            </p>
-                        </div>
-                    </a>
-                </div>
+            <div class="col-lg-3 col-sm-12 text-lg-right text-center">
+                <a class="btn btn-ghost" href="#">contactez</a>
             </div>
         </div>
     </div>
-</section><!-- End Team Section -->
+</section><!-- End Call to Action Section -->
 
 <!-- ======= Contact Section ======= -->
 <section id="contact">
@@ -559,5 +328,11 @@
     </div>
 </section><!-- End Contact Section -->
 
+<script type="module">
+    import {
+        add_class_scrollWindow
+    } from "<?= get_template_directory_uri() . '/assets/js/header_scroll_anime.js'; ?>"
+    add_class_scrollWindow();
+</script>
 
 <?php get_footer(); ?>

@@ -14,11 +14,13 @@
 
     <header class="header">
         <div class="containerNav container">
+            <div class="logo-header-block">
             <?php
             if (function_exists('the_custom_logo')) {
                 the_custom_logo();
             }
             ?>
+            </div>
             <div class="btnBurgerMenu">
                 <span class="buger1">|</span>
                 <span class="buger2">|</span>
