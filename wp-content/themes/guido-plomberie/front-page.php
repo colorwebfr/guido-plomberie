@@ -37,30 +37,46 @@
         <p>Vous avez besoin d'un devis, un conseil ou vous avez une urgence ?<br>Guido plomberie intervient sur tous le bassins niçois et alentours !</p>
         <div class="row stats-row">
             <div class="stats-col text-center col-md-3 col-sm-6">
-                <div class="circle">
+                <div class="circle p-relative">
                     <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-sink"></i></span></a>
                     Installation & remplacement
+                    <p class="pile-flip">
+                        <a href="#les-tarifs" class="tarif-call">Voir les tarifs</a>
+                        <a href="tel:+33619387998" class="tarif-call">Appeler</a>
+                    </p>
                 </div>
             </div>
 
             <div class="stats-col text-center col-md-3 col-sm-6">
-                <div class="circle">
+                <div class="circle p-relative">
                     <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-faucet-drip"></i></span></a>
                     Recherche de fuites
+                    <p class="pile-flip">
+                        <a href="#les-tarifs" class="tarif-call">Voir les tarifs</a>
+                        <a href="tel:+33619387998" class="tarif-call">Appeler</a>
+                    </p>
                 </div>
             </div>
 
             <div class="stats-col text-center col-md-3 col-sm-6">
-                <div class="circle">
+                <div class="circle p-relative">
                     <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-screwdriver-wrench"></i></span></a>
                     Débouchages & dépannages
+                    <p class="pile-flip">
+                        <a href="#les-tarifs" class="tarif-call">Voir les tarifs</a>
+                        <a href="tel:+33619387998" class="tarif-call">Appeler</a>
+                    </p>
                 </div>
             </div>
 
             <div class="stats-col text-center col-md-3 col-sm-6">
-                <div class="circle">
+                <div class="circle p-relative">
                     <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-bath"></i></span></a>
                     Robineteries, Chauffe eau, Cumulus
+                    <p class="pile-flip">
+                        <a href="#les-tarifs" class="tarif-call">Voir les tarifs</a>
+                        <a href="tel:+33619387998" class="tarif-call">Appeler</a>
+                    </p>
                 </div>
             </div>
         </div>
@@ -117,9 +133,9 @@
             ?>
             <?php if ($loop->have_posts()) : ?>
                 <?php while ($loop->have_posts()) : $loop->the_post() ?>
-                <?php
-                $thumb_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
-                ?>
+                    <?php
+                    $thumb_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+                    ?>
                     <div class="col-lg-3 col-sm-6 col-xs-12">
                         <div class="card card-block">
                             <a href="<?= $thumb_url; ?>" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="<?= the_title(); ?>" src="<?= $thumb_url; ?>">
@@ -156,6 +172,67 @@
         </div>
     </div>
 </section><!-- End Call to Action Section -->
+
+<!-- Section  tarif -->
+<section class="tarif-home" id="les-tarifs">
+    <div class="container">
+        <h2 class="text-center">Nos tarifs en toute transparence</h2>
+        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam cupiditate, eligendi ab, quos numquam repellendus excepturi hic vitae exercitationem, illum illo incidunt corporis? Vero, dignissimos ipsum nobis corporis ipsa dolorem.</p>
+    </div><br>
+    <div class="container">
+        <div class="row card-deck mb-3 text-center">
+
+            <div class="col-md-4 col-xs-12 mb-4 box-shadow card-price">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Dépannage - Urgence</h4>
+                </div>
+                <div class="card-body text-left">
+                    <h5 class="card-title pricing-card-title bold">€50 <small class="text-muted">/ H</small></h5>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Dégât des eaux</li>
+                        <li>Débouchage</li>
+                        <li>Fuite de cumulus</li>
+                        <li>Remplacement chasse d'eau (WC)</li>
+                        <li>Remplacement robinetterie ...</li>
+                    </ul>
+                    <a class="btn-globale-2" href="#contact-form">contactez</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-12 mb-4 box-shadow card-price">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Installation - remplacement</h4>
+                </div>
+                <div class="card-body text-left">
+                    <h5 class="card-title pricing-card-title bold">€50 <small class="text-muted">/ H</small></h5>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Cumulus</li>
+                        <li>Chauffe-eau</li>
+                        <li>W.C, lavabo, evier</li>
+                        <li>Bac à douche, Baignoire ...</li>
+                    </ul>
+                    <a class="btn-globale-2" href="#contact-form">contactez</a>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-xs-12 mb-4 box-shadow card-price">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Refontes - créations</h4>
+                </div>
+                <div class="card-body text-left">
+                    <h5 class="card-title pricing-card-title bold">€50 <small class="text-muted">/ H</small></h5>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Salle de bain</li>
+                        <li>Cuisine</li>
+                        <li>Toilette</li>
+                    </ul>
+                    <a class="btn-globale-2" href="#contact-form">contactez</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <!-- ======= Contact Section ======= -->
 <section id="contact">

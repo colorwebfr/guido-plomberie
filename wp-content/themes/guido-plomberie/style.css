@@ -85,7 +85,28 @@ Utilitaires
 .C_White {
   color: #fff;
 }
-
+.p-relative {
+  position: relative;
+}
+a.btn-globale-2 {
+  background-color: #199EB8;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  transition: .2s ease-in-out;
+}
+a.btn-globale-2:hover {
+  background-color: #E04F00;
+}
+.bold {
+  font-weight: bold;
+}
+.text-left {
+  text-align: left !important;
+}
 /*----------------------------------------------------------
 Form devis Hero
 -----------------------------------------------------------------*/
@@ -180,10 +201,55 @@ form.wpcf7-form ::placeholder {
   padding-left: 15px;
   padding-right: 15px;
 }
+/*-------------------------------------------------------------------
+ Page 404
+ ------------------------------------------------------------------*/
+ .link-return-home {
+  font-size: 22px;
+  text-decoration: underline;
+ }
 
 /*-------------------------------------------------------------------
 Home page
 --------------------------------------------------------------------*/
+.card-body {
+  flex: 1 1 auto;
+  padding: 2rem 1rem 2rem 3rem;
+}
+.card-price {
+  border: solid 1px #c5c5c5;
+  padding: 0;
+}
+p.pile-flip {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 168px;
+  width: 168px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background: #000000eb;
+  border-radius: 50%;
+  z-index: 5;
+  transition: .3s ease-in-out;
+  transform: scaleX(-1);
+  visibility: hidden;
+}
+.circle:hover p.pile-flip {
+  transform: scaleX(1);
+  visibility: visible;
+}
+
+a.tarif-call {
+  border: solid 1px;
+  padding: 5px 5px;
+  width: 120px;
+  margin: 5px auto;
+  color: #ffffff;
+}
+
 .portfolio-grid p {
   color: #dcdcdc !important;
   padding: 0px 15px;
@@ -683,6 +749,7 @@ img.robinet-mid-section {
   border-radius: 50%;
   font-weight: 700;
   transition: .2s ease-in-out;
+  z-index: 10;
 }
 
 /*--------------------------------------------------------------

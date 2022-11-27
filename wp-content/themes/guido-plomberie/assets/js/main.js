@@ -34,7 +34,7 @@
   }
 
   /**
-   * Easy on scroll event listener 
+   * Easy on scroll event listener
    */
   const onscroll = (el, listener) => {
     el.addEventListener('scroll', listener)
@@ -63,16 +63,16 @@
   /**
    * Scrolls to an element with header offset
    */
-  const scrollto = (el) => {
-    let header = select('#header')
-    let offset = header.offsetHeight
+  // const scrollto = (el) => {
+  //   let header = select('#header')
+  //   let offset = header.offsetHeight
 
-    let elementPos = select(el).offsetTop
-    window.scrollTo({
-      top: elementPos - offset,
-      behavior: 'smooth'
-    })
-  }
+  //   let elementPos = select(el).offsetTop
+  //   window.scrollTo({
+  //     top: elementPos - offset,
+  //     behavior: 'smooth'
+  //   })
+  // }
 
   /**
    * Header fixed top on scroll
@@ -111,7 +111,7 @@
   }
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate portfolio lightbox
    */
   const portfolioLightbox = GLightbox({
     selector: '.portfolio-lightbox'
@@ -120,16 +120,16 @@
   /**
    * Scroll with ofset on page load with hash links in the url
    */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      if (select(window.location.hash)) {
-        scrollto(window.location.hash)
-      }
-    }
-  });
+  // window.addEventListener('load', () => {
+  //   if (window.location.hash) {
+  //     if (select(window.location.hash)) {
+  //       scrollto(window.location.hash)
+  //     }
+  //   }
+  // });
 
   /**
-   * Initiate Pure Counter 
+   * Initiate Pure Counter
    */
   new PureCounter();
 
