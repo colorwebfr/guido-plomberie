@@ -18,8 +18,8 @@
                 </div>
             </div>
             <div class="col-md-6 col-xs-12">
-                <div class="content-hero-right">
-                    <h2>Demandez un devis</h2>
+                <div id="contact-form" class="content-hero-right">
+                    <h2>Devis - Informations</h2>
                     <?= do_shortcode('[contact-form-7 id="14" title="Demander un devis"]'); ?>
                 </div>
             </div>
@@ -38,28 +38,28 @@
         <div class="row stats-row">
             <div class="stats-col text-center col-md-3 col-sm-6">
                 <div class="circle">
-                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-phone"></i></span></a>
+                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-sink"></i></span></a>
                     Installation & remplacement
                 </div>
             </div>
 
             <div class="stats-col text-center col-md-3 col-sm-6">
                 <div class="circle">
-                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-phone"></i></span></a>
+                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-faucet-drip"></i></span></a>
                     Recherche de fuites
                 </div>
             </div>
 
             <div class="stats-col text-center col-md-3 col-sm-6">
                 <div class="circle">
-                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-phone"></i></span></a>
+                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-screwdriver-wrench"></i></span></a>
                     Débouchages & dépannages
                 </div>
             </div>
 
             <div class="stats-col text-center col-md-3 col-sm-6">
                 <div class="circle">
-                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-phone"></i></span></a>
+                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-bath"></i></span></a>
                     Robineteries, Chauffe eau, Cumulus
                 </div>
             </div>
@@ -75,7 +75,12 @@
             <div class="col-md-6 col-xs-12">
                 <div class="content-about-home-L">
                     <h2>Qui sommes nous ?</h2>
-                    <p>This is the most powerful theme with thousands of options that you have never seen before.</p>
+                    <p>Guido Plomberie est une entreprise de plomberie experte en dépannage, création, débouchage, recherche de fuite et installations diverses ( bac à douche, baignoire, robinetteries, cumulus, chauffe eau ...).<br>
+                        Guido plomberie opère sur tout le secteur des Alpes Maritimes.<br>
+                        C'est une société très attaché à la notion de qualité de travail et de satisfaction du client car c'est un métier de service et de passion.</p>
+                    <p>
+                        Que ce soit pour une demande de devis, un conseil ou une urgence. N'hésitez pas à nous contacter, nous serons toujours contents de pouvoir vous aider
+                    </p>
                 </div>
             </div>
             <div class="col-md-6 col-xs-12">
@@ -89,165 +94,48 @@
 
 <!-- ======= Portfolio Section ======= -->
 <section class="portfolio" id="portfolio">
-
     <div class="container text-center">
         <h2>
             Quelques réalisations
         </h2>
-
-        <p>
-            Au delà de l'utile, mon métier me permet de réaliser et concevoir des pièces d'eaux aussi pratique qu'agréable à vivre<br>
-            et la satisfaction du client est un vrai moteur dans mon métier.
-        </p>
+        <p>Au delà de l'utile, mon métier me permet de réaliser et concevoir des pièces d'eaux aussi pratique qu'agréable à vivre<br>
+            et la satisfaction du client est un vrai moteur dans mon métier.</p>
     </div>
 
     <div class="portfolio-grid">
         <div class="row">
-            <div class="col-lg-3 col-sm-6 col-xs-12">
-                <div class="card card-block">
-                    <a href="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-1.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-1.jpg">
-                        <div class="portfolio-over">
-                            <div>
-                                <h3 class="card-title">
-                                    The Dude Rockin'
-                                </h3>
+            <?php
+            $args = array(
+                "post_type" => "realisations",
+                "post_status" => "publish",
+                "posts_per_page"      => 8,
+                "orderby"  => "ID",
+                "order"  => "DESC"
+            );
 
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                                </p>
-                            </div>
+            $loop = new WP_Query($args);
+            ?>
+            <?php if ($loop->have_posts()) : ?>
+                <?php while ($loop->have_posts()) : $loop->the_post() ?>
+                <?php
+                $thumb_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
+                ?>
+                    <div class="col-lg-3 col-sm-6 col-xs-12">
+                        <div class="card card-block">
+                            <a href="<?= $thumb_url; ?>" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="<?= the_title(); ?>" src="<?= $thumb_url; ?>">
+                                <div class="portfolio-over">
+                                    <div>
+                                        <h3 class="card-title"><?= wp_trim_words(get_the_title(), 3, '...');  ?></h3>
+                                        <p class="card-text">
+                                            <?= wp_trim_words(get_the_content(), 10, '...'); ?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6 col-xs-12">
-                <div class="card card-block">
-                    <a href="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-2.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-2.jpg">
-                        <div class="portfolio-over">
-                            <div>
-                                <h3 class="card-title">
-                                    The Dude Rockin'
-                                </h3>
-
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6 col-xs-12">
-                <div class="card card-block">
-                    <a href="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-3.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-3.jpg">
-                        <div class="portfolio-over">
-                            <div>
-                                <h3 class="card-title">
-                                    The Dude Rockin'
-                                </h3>
-
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6 col-xs-12">
-                <div class="card card-block">
-                    <a href="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-4.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-4.jpg">
-                        <div class="portfolio-over">
-                            <div>
-                                <h3 class="card-title">
-                                    The Dude Rockin'
-                                </h3>
-
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-3 col-sm-6 col-xs-12">
-                <div class="card card-block">
-                    <a href="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-5.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-5.jpg">
-                        <div class="portfolio-over">
-                            <div>
-                                <h3 class="card-title">
-                                    The Dude Rockin'
-                                </h3>
-
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6 col-xs-12">
-                <div class="card card-block">
-                    <a href="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-6.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-6.jpg">
-                        <div class="portfolio-over">
-                            <div>
-                                <h3 class="card-title">
-                                    The Dude Rockin'
-                                </h3>
-
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6 col-xs-12">
-                <div class="card card-block">
-                    <a href="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-7.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-7.jpg">
-                        <div class="portfolio-over">
-                            <div>
-                                <h3 class="card-title">
-                                    The Dude Rockin'
-                                </h3>
-
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-sm-6 col-xs-12">
-                <div class="card card-block">
-                    <a href="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-8.jpg" class="portfolio-lightbox" data-gallery="portfolioGallery"><img alt="" src="/guido-plomberie/wp-content/themes/guido-plomberie/assets/img/porf-8.jpg">
-                        <div class="portfolio-over">
-                            <div>
-                                <h3 class="card-title">
-                                    The Dude Rockin'
-                                </h3>
-
-                                <p class="card-text">
-                                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                                </p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+                    </div>
+                <?php endwhile; ?>
+            <?php endif; ?>
         </div>
     </div>
 </section><!-- End Portfolio Section -->
@@ -263,7 +151,7 @@
             </div>
 
             <div class="col-lg-3 col-sm-12 text-lg-right text-center">
-                <a class="btn btn-ghost" href="#">contactez</a>
+                <a class="btn btn-ghost" href="#contact-form">contactez</a>
             </div>
         </div>
     </div>

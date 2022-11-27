@@ -174,16 +174,23 @@ form.wpcf7-form ::placeholder {
   opacity: 1;
 }
 
-.admin-bar .menu {
-  top: 32px;
-  /* on prend en compte le décalage */
-}
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+/*-------------------------------------------------------------------
+Home page
+--------------------------------------------------------------------*/
+.portfolio-grid p {
+  color: #dcdcdc !important;
+  padding: 0px 15px;
+}
+
+.portfolio-grid h3 {
+  padding: 0px 15px;
 }
 
 /* Header */
@@ -269,6 +276,10 @@ nav.menuHeader ul li a {
   color: #199EB8;
 }
 
+#prestations i.fa-solid {
+  font-size: 24px;
+}
+
 section {
   padding: 85px 0;
 }
@@ -280,6 +291,7 @@ section {
   border-radius: 0;
   margin: 0;
   overflow: hidden;
+  height: 177px;
 }
 
 a:hover {
@@ -649,8 +661,8 @@ img.robinet-mid-section {
   width: 180px;
   height: 180px;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  color: #666;
+  font-weight: 600;
+  color: #000;
   border: 6px solid #199EB8;
   border-radius: 50%;
   padding: 55px 15px 0 15px;
@@ -804,7 +816,7 @@ img.robinet-mid-section {
     ================================================== */
 .cta {
   background-color: #199EB8;
-  padding: 25px 0;
+  padding: 15px 0;
 }
 
 .cta h2 {
@@ -1279,6 +1291,11 @@ img.robinet-mid-section {
 
 /* Au dessus de 865px */
 @media only screen and (min-width: 865px) {
+
+  .divider-hero {
+    margin-top: 70px;
+    padding-top: 30px;
+  }
 
   /* Menu */
   .admin-bar header {
