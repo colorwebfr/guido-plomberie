@@ -85,9 +85,11 @@ Utilitaires
 .C_White {
   color: #fff;
 }
+
 .p-relative {
   position: relative;
 }
+
 a.btn-globale-2 {
   background-color: #199EB8;
   font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -98,15 +100,22 @@ a.btn-globale-2 {
   border: none;
   transition: .2s ease-in-out;
 }
+
 a.btn-globale-2:hover {
   background-color: #E04F00;
 }
+
 .bold {
   font-weight: bold;
 }
+
 .text-left {
   text-align: left !important;
 }
+.align-center {
+  align-items: center !important;
+}
+
 /*----------------------------------------------------------
 Form devis Hero
 -----------------------------------------------------------------*/
@@ -201,13 +210,21 @@ form.wpcf7-form ::placeholder {
   padding-left: 15px;
   padding-right: 15px;
 }
+
 /*-------------------------------------------------------------------
  Page 404
  ------------------------------------------------------------------*/
- .link-return-home {
+.link-return-home {
   font-size: 22px;
   text-decoration: underline;
- }
+}
+
+/*------------------------------------------------------------------
+  Footer 
+  -------------------------------------------------------------------*/
+footer {
+  background: #e5e5e5;
+}
 
 /*-------------------------------------------------------------------
 Home page
@@ -216,10 +233,19 @@ Home page
   flex: 1 1 auto;
   padding: 2rem 1rem 2rem 3rem;
 }
+
+.card-price .btn-globale-2 {
+  position: absolute;
+  bottom: 15px;
+  left: 3rem;
+}
+
 .card-price {
   border: solid 1px #c5c5c5;
   padding: 0;
+  height: 330px;
 }
+
 p.pile-flip {
   position: absolute;
   top: 0;
@@ -237,6 +263,7 @@ p.pile-flip {
   transform: scaleX(-1);
   visibility: hidden;
 }
+
 .circle:hover p.pile-flip {
   transform: scaleX(1);
   visibility: visible;
@@ -1500,12 +1527,13 @@ img.robinet-mid-section {
     height: 100vh;
     float: none;
     position: absolute;
-    background: #944465;
-    top: 86px;
+    background: #000000db;
+    top: 70px;
     left: -300px;
+    padding-top: 30px;
     width: 300px;
     transition: .2s ease-in-out;
-  }
+}
 
   .menu-item a {
     line-height: 24px;

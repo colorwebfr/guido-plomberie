@@ -176,18 +176,20 @@
 <!-- Section  tarif -->
 <section class="tarif-home" id="les-tarifs">
     <div class="container">
-        <h2 class="text-center">Nos tarifs en toute transparence</h2>
-        <p class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam cupiditate, eligendi ab, quos numquam repellendus excepturi hic vitae exercitationem, illum illo incidunt corporis? Vero, dignissimos ipsum nobis corporis ipsa dolorem.</p>
+        <h2 class="text-center">Nos tarifs en toute transparence</h2><br>
+        <p class="text-center">Les tarifs des services et prestations de plomberie dépendent de plusieurs facteurs (le lieu de l'intervention, les possibles complications liées à la vétusté du logement, une demande personnaliser etc...).
+        C'est pour toutes ces raisons et par soucis de transparence que les tarifs mentionnés plus bas sont des tarifs de base afin de donner des indications sur le coût d'une prestation courante.
+        </p>
     </div><br>
     <div class="container">
         <div class="row card-deck mb-3 text-center">
 
-            <div class="col-md-4 col-xs-12 mb-4 box-shadow card-price">
+            <div class="col-md-4 col-xs-12 mb-4 box-shadow card-price position-relative">
                 <div class="card-header">
                     <h4 class="my-0 font-weight-normal">Dépannage - Urgence</h4>
                 </div>
                 <div class="card-body text-left">
-                    <h5 class="card-title pricing-card-title bold">€50 <small class="text-muted">/ H</small></h5>
+                    <h5 class="card-title pricing-card-title bold">€50 <small class="text-muted">/ Heure</small></h5>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li>Dégât des eaux</li>
                         <li>Débouchage</li>
@@ -195,16 +197,16 @@
                         <li>Remplacement chasse d'eau (WC)</li>
                         <li>Remplacement robinetterie ...</li>
                     </ul>
-                    <a class="btn-globale-2" href="#contact-form">contactez</a>
+                    <a class="btn-globale-2" href="tel:+33619387998">+33 619 387 998</a>
                 </div>
             </div>
 
-            <div class="col-md-4 col-xs-12 mb-4 box-shadow card-price">
+            <div class="col-md-4 col-xs-12 mb-4 box-shadow card-price position-relative">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Installation - remplacement</h4>
+                    <h4 class="my-0 font-weight-normal">Installation - Remplacement</h4>
                 </div>
                 <div class="card-body text-left">
-                    <h5 class="card-title pricing-card-title bold">€50 <small class="text-muted">/ H</small></h5>
+                    <h5 class="card-title pricing-card-title bold">€50 <small class="text-muted">/ Heure</small></h5>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li>Cumulus</li>
                         <li>Chauffe-eau</li>
@@ -215,16 +217,17 @@
                 </div>
             </div>
 
-            <div class="col-md-4 col-xs-12 mb-4 box-shadow card-price">
+            <div class="col-md-4 col-xs-12 mb-4 box-shadow card-price position-relative">
                 <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Refontes - créations</h4>
+                    <h4 class="my-0 font-weight-normal">Refontes - Créations</h4>
                 </div>
                 <div class="card-body text-left">
-                    <h5 class="card-title pricing-card-title bold">€50 <small class="text-muted">/ H</small></h5>
+                    <h5 class="card-title pricing-card-title bold">€50 <small class="text-muted">/ Heure</small></h5>
                     <ul class="list-unstyled mt-3 mb-4">
                         <li>Salle de bain</li>
                         <li>Cuisine</li>
                         <li>Toilette</li>
+                        <li>Salle d'eau</li>
                     </ul>
                     <a class="btn-globale-2" href="#contact-form">contactez</a>
                 </div>
@@ -233,65 +236,6 @@
         </div>
     </div>
 </section>
-
-<!-- ======= Contact Section ======= -->
-<section id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h2 class="section-title">Contact Us</h2>
-            </div>
-        </div>
-
-        <div class="row justify-content-center">
-            <div class="col-lg-3 col-md-4">
-                <div class="info">
-                    <div>
-                        <i class="bi bi-geo-alt"></i>
-                        <p>A108 Adam Street<br>New York, NY 535022</p>
-                    </div>
-
-                    <div>
-                        <i class="bi bi-envelope"></i>
-                        <p>info@example.com</p>
-                    </div>
-
-                    <div>
-                        <i class="bi bi-phone"></i>
-                        <p>+1 5589 55488 55s</p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="col-lg-5 col-md-8">
-                <div class="form">
-                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group mt-3">
-                            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-                        </div>
-                        <div class="my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                        </div>
-                        <div class="text-center"><button type="submit">Send Message</button></div>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section><!-- End Contact Section -->
 
 <script type="module">
     import {
