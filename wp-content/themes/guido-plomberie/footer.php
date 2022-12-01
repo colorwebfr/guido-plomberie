@@ -30,7 +30,11 @@
                 </div>
             </div>
         </div>
-
+        <div class="copyrightBar">
+            <div class="container">
+                <p>&copy;<?= date(' - Y - '); ?>Plomberie Guido - By <a href="https://colorweb.fr" target="_blank">Colorweb.fr</a></p>
+            </div>
+        </div>
     </footer>
 
     <?php wp_footer() ?>

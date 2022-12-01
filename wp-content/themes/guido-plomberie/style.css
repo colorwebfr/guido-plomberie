@@ -112,6 +112,7 @@ a.btn-globale-2:hover {
 .text-left {
   text-align: left !important;
 }
+
 .align-center {
   align-items: center !important;
 }
@@ -223,7 +224,26 @@ form.wpcf7-form ::placeholder {
   Footer 
   -------------------------------------------------------------------*/
 footer {
-  background: #e5e5e5;
+  background: #b1b1b1;
+}
+
+footer .widget_block ul.wp-block-page-list {
+  padding-left: 0;
+}
+footer .widget_block li a,
+footer .widget_block li p {
+  color: #000000;
+}
+footer .copyrightBar p,
+.copyrightBar a {
+  color: #ffffff;
+  margin: 0;
+  font-family: 'Roboto';
+  font-size: 14px;
+}
+.copyrightBar {
+  background: #000000;
+  padding: 5px 0px;
 }
 
 /*-------------------------------------------------------------------
@@ -1533,7 +1553,7 @@ img.robinet-mid-section {
     padding-top: 30px;
     width: 300px;
     transition: .2s ease-in-out;
-}
+  }
 
   .menu-item a {
     line-height: 24px;
