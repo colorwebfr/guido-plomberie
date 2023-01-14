@@ -6,11 +6,11 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
-RewriteBase /guido-plomberie/
+RewriteBase /plomberie-guido/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /guido-plomberie/index.php [L]
+RewriteRule . /plomberie-guido/index.php [L]
 </IfModule>
 
 # END WordPress
