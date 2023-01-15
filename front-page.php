@@ -143,7 +143,7 @@
                                     <div>
                                         <h3 class="card-title"><?= wp_trim_words(get_the_title(), 3, '...');  ?></h3>
                                         <p class="card-text">
-                                            <?= wp_trim_words(get_the_content(), 10, '...'); ?>
+                                        <?= wp_trim_words(get_field('description_de_la_realisation'), 10, '...');  ?>
                                         </p>
                                     </div>
                                 </div>
