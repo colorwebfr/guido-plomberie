@@ -348,7 +348,8 @@ a.tarif-call {
 /*----------------------------------------------
   Page Réalisations
 ----------------------------------------------*/
-.page-content-realisations .hero-globale-page {
+.page-content-realisations .hero-globale-page,
+.single-realisations .hero-globale-page-single {
   background: url("/wp-content/uploads/2023/01/parallax-bg.jpg") center top no-repeat;
   color: #fff;
 }
@@ -384,6 +385,37 @@ a.tarif-call {
   left: 15px;
   color: #fff;
   text-decoration: underline;
+}
+
+/*----------------------------------------------
+  Single Réalisations
+----------------------------------------------*/
+.single-realisations .hero-globale-page-single {
+  min-height: 114px;
+  padding: 0;
+  margin-top: 70px;
+  display: flex;
+  align-items: center;
+}
+.single-realisations .content-single-real {
+  margin: 30px auto;
+}
+.single-realisations .thumb-single-real {
+  height: 470px;
+  overflow: hidden;
+}
+.single-realisations .thumb-single-real img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.single-realisations .container {
+  max-width: 980px;
+}
+.description p {
+  margin: 30px auto;
+  text-align: center;
+  font-weight: bold;
 }
 
 /* Header */

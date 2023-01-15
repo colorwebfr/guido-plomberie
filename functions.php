@@ -136,21 +136,21 @@ function cdn_asset_font_awesome(){
 add_action('wp_enqueue_scripts', 'cdn_asset_font_awesome');
 
 //## Files customize Login page
-// function custom_login_page() 
-// {
-//     echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/login/login-style-perso.css" />';
-// }
-//add_action('login_head', 'custom_login_page');
+ function custom_login_page() 
+ {
+     echo '<link rel="stylesheet" type="text/css" href="' . get_bloginfo('stylesheet_directory') . '/login/login-style-perso.css" />';
+ }
+add_action('login_head', 'custom_login_page');
 
 //##Customize URL logo login
-// function login_logo_url_page() {
-//     return 'https://ludi.beta-base-sud.com/wp-login.php';
-//     }
-// add_filter( 'login_headerurl', 'login_logo_url_page' );
+ function login_logo_url_page() {
+     return get_site_url();
+     }
+ add_filter( 'login_headerurl', 'login_logo_url_page' );
 
 //##Customize name LOGO login
-// function login_logo_url_title_page() {
-//     return get_bloginfo( 'name' );
-//     }
-// add_filter( 'login_headertext', 'login_logo_url_title_page' );
+ function login_logo_url_title_page() {
+     return get_bloginfo( 'name' );
+     }
+ add_filter( 'login_headertext', 'login_logo_url_title_page' );
 
