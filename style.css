@@ -118,6 +118,7 @@ a.btn-globale-2:hover {
 .align-center {
   align-items: center !important;
 }
+
 .hero-globale-page {
   height: 300px;
   display: flex;
@@ -345,6 +346,7 @@ a.tarif-call {
 .portfolio-grid h3 {
   padding: 0px 15px;
 }
+
 /*----------------------------------------------
   Page Réalisations
 ----------------------------------------------*/
@@ -353,32 +355,39 @@ a.tarif-call {
   background: url("/wp-content/uploads/2023/01/parallax-bg.jpg") center top no-repeat;
   color: #fff;
 }
+
 .page-content-realisations .realisation-img {
   height: 230px;
   overflow: hidden;
 }
+
 .page-content-realisations .realisation-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
+
 .page-content-realisations .list-realisation {
   margin: 90px AUTO;
 }
+
 .page-content-realisations .text-realisation-posts {
   padding: 30px 15px 15px 15px;
   position: relative;
   background: #129eb8;
   height: 220px;
 }
+
 .page-content-realisations .text-realisation-posts h3 {
   font-size: 20px;
   font-weight: bold;
 }
+
 .page-content-realisations .content-realisations-posts {
   margin-bottom: 24px;
 }
+
 .page-content-realisations a.btn-read-more {
   position: absolute;
   bottom: 15px;
@@ -397,21 +406,26 @@ a.tarif-call {
   display: flex;
   align-items: center;
 }
+
 .single-realisations .content-single-real {
   margin: 30px auto;
 }
+
 .single-realisations .thumb-single-real {
   height: 470px;
   overflow: hidden;
 }
+
 .single-realisations .thumb-single-real img {
   object-fit: cover;
   height: 100%;
   width: 100%;
 }
+
 .single-realisations .container {
   max-width: 980px;
 }
+
 .description p {
   margin: 30px auto;
   text-align: center;
@@ -539,6 +553,7 @@ a:hover {
 .logo-header-block img {
   height: auto;
   padding-top: 10px;
+  width: 180px;
 }
 
 #header #logo h1 {
@@ -1618,10 +1633,18 @@ img.robinet-mid-section {
   .btnBurgerMenu {
     position: absolute;
     right: 30px;
-    top: 6px;
+    top: 0px;
     padding: 15px;
     color: #ffffff;
     cursor: pointer;
+  }
+
+  .btnBurgerMenu span {
+    color: #ffffff;
+  }
+
+  .logo-header-block {
+    width: 200px;
   }
 
   .home .header {
