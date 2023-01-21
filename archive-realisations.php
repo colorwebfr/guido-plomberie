@@ -23,19 +23,21 @@
                         <?php while (have_posts()) : the_post(); ?>
                             <div class="col-md-4 col-sm-6 col-xs-12">
                                 <div class="content-realisations-posts">
-                                    <div class="realisation-img">
-                                        <?php the_post_thumbnail(); ?>
-                                    </div>
-                                    <div class="text-realisation-posts">
-                                        <h3><?php wp_trim_words(the_title(), 3, '...'); ?></h3>
-                                        <p><?= wp_trim_words(get_field('description_de_la_realisation'), 15, '...'); ?></p><br>
-                                        <a href="<?php the_permalink(); ?>" class="btn-read-more">Voir la réalisation</a>
-                                    </div>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <div class="realisation-img">
+                                            <?php the_post_thumbnail(); ?>
+                                        </div>
+                                        <div class="text-realisation-posts">
+                                            <h3><?php wp_trim_words(the_title(), 3, '...'); ?></h3>
+                                            <p><?= wp_trim_words(get_field('description_de_la_realisation'), 15, '...'); ?></p><br>
+                                            <span class="btn-read-more">Voir la réalisation</span>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         <?php endwhile; ?>
                     </div>
-                    <?php posts_nav_link();?>
+                    <?php posts_nav_link(); ?>
                 </div>
             </div>
         <?php else : ?>

@@ -36,7 +36,7 @@
         </h2>
         <p>Vous avez besoin d'un devis, un conseil ou vous avez une urgence ?<br>Guido plomberie intervient sur tous le bassins niçois et alentours !</p>
         <div class="row stats-row">
-            <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="stats-col text-center col-md-2 col-sm-6">
                 <div class="circle p-relative">
                     <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-sink"></i></span></a>
                     Installation & remplacement
@@ -47,7 +47,7 @@
                 </div>
             </div>
 
-            <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="stats-col text-center col-md-2 col-sm-6">
                 <div class="circle p-relative">
                     <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-faucet-drip"></i></span></a>
                     Recherche de fuites
@@ -58,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="stats-col text-center col-md-2 col-sm-6">
                 <div class="circle p-relative">
                     <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-screwdriver-wrench"></i></span></a>
                     Débouchages & dépannages
@@ -69,9 +69,20 @@
                 </div>
             </div>
 
-            <div class="stats-col text-center col-md-3 col-sm-6">
+            <div class="stats-col text-center col-md-2 col-sm-6">
                 <div class="circle p-relative">
                     <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-bath"></i></span></a>
+                    Robineteries, Chauffe eau, Cumulus
+                    <p class="pile-flip">
+                        <a href="#les-tarifs" class="tarif-call">Voir les tarifs</a>
+                        <a href="tel:+33619387998" class="tarif-call">Appeler</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="stats-col text-center col-md-2 col-sm-6">
+                <div class="circle p-relative">
+                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-shower"></i></span></a>
                     Robineteries, Chauffe eau, Cumulus
                     <p class="pile-flip">
                         <a href="#les-tarifs" class="tarif-call">Voir les tarifs</a>
@@ -115,7 +126,8 @@
             Quelques réalisations
         </h2>
         <p>Au delà de l'utile, mon métier me permet de réaliser et concevoir des pièces d'eaux aussi pratique qu'agréable à vivre<br>
-            et la satisfaction du client est un vrai moteur dans mon métier.</p>
+            et la satisfaction du client est un vrai moteur dans mon métier.</p><br>
+        <h3 class="h3_cta"><a href="<?= home_url() . '/realisations'; ?>">Voir toutes les réalisations <i class="fa-solid fa-angle-right"></i></a></h3>
     </div>
 
     <div class="portfolio-grid">
@@ -143,7 +155,7 @@
                                     <div>
                                         <h3 class="card-title"><?= wp_trim_words(get_the_title(), 3, '...');  ?></h3>
                                         <p class="card-text">
-                                        <?= wp_trim_words(get_field('description_de_la_realisation'), 10, '...');  ?>
+                                            <?= wp_trim_words(get_field('description_de_la_realisation'), 10, '...');  ?>
                                         </p>
                                     </div>
                                 </div>

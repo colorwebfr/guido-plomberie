@@ -346,6 +346,10 @@ a.tarif-call {
 .portfolio-grid h3 {
   padding: 0px 15px;
 }
+section#prestations {
+  background: url('/wp-content/uploads/2023/01/bandeau-bubble.png') center no-repeat;
+  background-size: cover;
+}
 
 /*----------------------------------------------
   Page Réalisations
@@ -366,6 +370,7 @@ a.tarif-call {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transition: .3s ease-in-out;
 }
 
 .page-content-realisations .list-realisation {
@@ -382,18 +387,23 @@ a.tarif-call {
 .page-content-realisations .text-realisation-posts h3 {
   font-size: 20px;
   font-weight: bold;
+  color: #000;
 }
 
 .page-content-realisations .content-realisations-posts {
   margin-bottom: 24px;
 }
 
-.page-content-realisations a.btn-read-more {
+.page-content-realisations .btn-read-more {
   position: absolute;
   bottom: 15px;
   left: 15px;
   color: #fff;
   text-decoration: underline;
+}
+
+.content-realisations-posts a:hover img {
+  transform: scale(1.2);
 }
 
 /*----------------------------------------------
@@ -407,6 +417,21 @@ a.tarif-call {
   align-items: center;
 }
 
+.single-realisations .thumb-single-real .description {
+  position: absolute;
+  z-index: 5;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.single-realisations .thumb-single-real .description p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
 .single-realisations .content-single-real {
   margin: 30px auto;
 }
@@ -414,6 +439,18 @@ a.tarif-call {
 .single-realisations .thumb-single-real {
   height: 470px;
   overflow: hidden;
+  position: relative;
+}
+
+.thumb-single-real::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #0000007a;
+  z-index: 4;
+  width: 100%;
+  height: 100%;
 }
 
 .single-realisations .thumb-single-real img {
@@ -426,10 +463,90 @@ a.tarif-call {
   max-width: 980px;
 }
 
+.single-realisations .slick-track {
+  display: flex;
+  justify-content: center;
+}
+
+.single-realisations .slider__item__real {
+  overflow: hidden;
+  max-height: 300px;
+  margin: auto 5px;
+}
+
+.single-realisations section#travaux {
+  height: 500px;
+  padding: 30px 15px;
+}
+
+.single-realisations .blockSlideReal {
+  float: left;
+  width: 50%;
+}
+
+.pagination_single .nav-next span,
+.pagination_single .nav-previous span {
+  background: #199eb8;
+  padding: 5px 15px;
+  color: #fff;
+}
+
+.pagination_single .container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px auto;
+}
+
+.single-realisations .slider__item__real img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.single-realisations .slider_real,
+.single-realisations .blockSlideReal {
+  position: relative;
+}
+
+.single-realisations button.slick-prev.slick-arrow {
+  position: absolute;
+  bottom: -40px;
+  left: 40%;
+}
+
+.single-realisations button.slick-next.slick-arrow {
+  position: absolute;
+  bottom: -40px;
+  right: 40%;
+}
+
+.single-realisations button.slick-next.slick-arrow,
+.single-realisations button.slick-prev.slick-arrow {
+  background: #199eb8;
+  color: #fff;
+  border: none;
+  padding: 3px 10px;
+}
+
+.single-realisations .title_aft_bfr {
+  text-align: center;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
 .description p {
   margin: 30px auto;
   text-align: center;
   font-weight: bold;
+}
+
+#free-content {
+  padding: 30px 15px;
+}
+
+#free-content .content-description {
+  background: #dee2e6;
+  padding: 30px;
 }
 
 /* Header */
@@ -894,6 +1011,7 @@ img.robinet-mid-section {
   --------------------------------------------------------------*/
 .stats-row {
   margin-top: 65px;
+  justify-content: center;
 }
 
 .stats-col .circle {
@@ -1078,6 +1196,15 @@ img.robinet-mid-section {
   position: relative;
 }
 
+#portfolio .h3_cta {
+  text-align: right;
+  text-decoration: underline;
+  transition: .3s ease-in-out;
+}
+#portfolio:hover .h3_cta {
+  transform: scale(1.1);
+}
+
 /* ==================================================
     Portfolio Styling
     ================================================== */
@@ -1092,7 +1219,7 @@ img.robinet-mid-section {
 }
 
 .portfolio-grid {
-  margin-top: 65px;
+  margin-top: 30px;
 }
 
 .portfolio-grid .row {
