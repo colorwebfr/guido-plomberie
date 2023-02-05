@@ -1,5 +1,15 @@
     </div>
 
+    <!-- CTA ask devis if other page that home -->
+    <?php
+    if (!is_front_page()) {
+        get_template_part('templates-parts/cta-ask-devis');
+    }
+    ?>
+
+    <!-- Template parts popin -->
+    <?php get_template_part('templates-parts/popin', 'contact'); ?>
+
     <footer>
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -11,9 +21,9 @@
                         <div class="content-sup-foot">
                             <h3>Les pages</h3>
                             <ul>
-                                <li><a href="#">Plomberie Guido</a></li>
-                                <li><a href="#">Nos réalisation</a></li>
-                                <li><a href="#">Demandez un devis</a></li>
+                                <li><a href="<?= home_url(); ?>">Plomberie Guido</a></li>
+                                <li><a href="<?= home_url() . '/realisations'; ?>">Nos réalisation</a></li>
+                                <li><a class="contact-popin-click" href="#">Demandez un devis</a></li>
                             </ul>
                         </div>
                     </div>
@@ -66,6 +76,16 @@
     </footer>
 
     <?php wp_footer() ?>
+
+    <script type="module">
+        import {
+            popinContact,
+            redirect_after_submit
+        } from '<?= get_template_directory_uri() . '/assets/js/module.js'; ?>';
+        popinContact();
+        redirect_after_submit();
+    </script>
+
     </body>
 
     </html>

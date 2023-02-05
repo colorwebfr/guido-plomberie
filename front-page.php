@@ -254,7 +254,7 @@
 <script type="module">
     import {
         add_class_scrollWindow
-    } from "<?= get_template_directory_uri() . '/assets/js/header_scroll_anime.js'; ?>"
+    } from "<?= get_template_directory_uri() . '/assets/js/module.js'; ?>"
     add_class_scrollWindow();
 </script>
 

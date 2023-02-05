@@ -1,5 +1,5 @@
 
-
+// Slider Realisation
 export const sliderRealisation = () => {
     $(document).ready(function () {
         $('.slider_real').slick({
@@ -56,3 +56,50 @@ export const sliderRealisation = () => {
     });
 }
 
+//Popin contact
+export const popinContact = () => {
+    $(document).ready(function () {
+        $('.contact-popin-click').click(function (e) {
+            e.preventDefault();
+            $('.full-block-popin').show();
+        });
+        $('.popin-contact__close').click(function () {
+            $('.full-block-popin').hide();
+        });
+    });
+}
+
+//Add class on scroll
+export function add_class_scrollWindow() {
+    window.addEventListener("DOMContentLoaded", (e) => {
+        const widthScreen = window.innerWidth;
+        const headerNode = document.querySelector("header");
+        if (widthScreen > 864) {
+            if (window.scrollY > 100) {
+                headerNode.classList.add("bg-black");
+            }
+            else {
+                headerNode.classList.remove("bg-black");
+            }
+            window.addEventListener("scroll", () => {
+                const topHeader = window.scrollY;
+                if (topHeader > 100) {
+                    headerNode.classList.add("bg-black");
+                }
+                else {
+                    headerNode.classList.remove("bg-black");
+                }
+            });
+        }
+    });
+}
+
+//redirect after submit form
+export const redirect_after_submit = () => {
+    const loc_current = window.location.href;
+    document.addEventListener('wpcf7mailsent', function (event) {
+        setTimeout(function () {
+            location = loc_current;
+        }, 3000);
+    }, false);
+}

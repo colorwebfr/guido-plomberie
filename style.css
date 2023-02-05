@@ -182,6 +182,13 @@ form.wpcf7-form ::placeholder {
   height: 0;
 }
 
+.grecaptcha-badge {
+  z-index: 995;
+}
+.wpcf7 form.sent .wpcf7-response-output {
+  border-color: #46b450;
+  color: #fff;
+}
 
 /*--------------------------------------------------------------
 # Back to top button
@@ -192,7 +199,7 @@ form.wpcf7-form ::placeholder {
   opacity: 0;
   right: 15px;
   bottom: 15px;
-  z-index: 996;
+  z-index: 999;
   background: #199EB8;
   width: 40px;
   height: 40px;
@@ -346,6 +353,7 @@ a.tarif-call {
 .portfolio-grid h3 {
   padding: 0px 15px;
 }
+
 section#prestations {
   background: url('/wp-content/uploads/2023/01/bandeau-bubble-1.png') center no-repeat;
   background-size: cover;
@@ -477,6 +485,7 @@ section#prestations {
 .single-realisations section#travaux {
   height: 500px;
   padding: 30px 15px;
+  overflow-x: hidden;
 }
 
 .single-realisations .blockSlideReal {
@@ -519,7 +528,9 @@ section#prestations {
   bottom: -40px;
   right: 40%;
 }
-
+.slick-slide {
+  z-index: 980 !important;
+}
 .single-realisations button.slick-next.slick-arrow,
 .single-realisations button.slick-prev.slick-arrow {
   background: #199eb8;
@@ -556,7 +567,7 @@ section#prestations {
   width: 100%;
   height: 70px;
   background: #000000;
-  z-index: 999;
+  z-index: 99999;
 }
 
 a.tel-hero-home {
@@ -731,6 +742,90 @@ img.robinet-mid-section {
   align-items: center;
 }
 
+/* ==================================================
+  Templates parts Popin
+  ================================================== */
+.full-block-popin {
+  background: #000000e6;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 99999999999;
+  display: flex;
+  align-items: center;
+}
+
+.full-block-popin .popin-contact {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  max-width: 340px;
+  margin: 0 auto;
+}
+
+.full-block-popin .popin-contact__title {
+  color: #fff;
+}
+
+.full-block-popin .popin-contact__close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fff;
+  font-size: 24px;
+  border: solid 2px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+  CTA ASK devis if other that home page
+  --------------------------------------------------------------*/
+.widget-cta-devis {
+  position: fixed;
+  right: 0;
+  top: 40%;
+  z-index: 999;
+}
+
+.widget-cta-devis ul li a {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.widget-cta-devis ul li:first-child {
+  background: #129eb8;
+  padding: 10px 15px;
+}
+
+.widget-cta-devis ul li {
+  background: #000;
+  padding: 10px 15px;
+  transition: .3s ease-out;
+  position: relative;
+  right: -160px;
+}
+.widget-cta-devis ul li:hover {
+  right: 0;
+}
+li.puce-cta-devis i {
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 768px) {
   .header-social-links {
     margin: 0 15px 0 0;
@@ -848,6 +943,24 @@ img.robinet-mid-section {
 
   .navbar .dropdown .dropdown:hover>ul {
     left: -100%;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .stats-row {
+    margin-top: 65px;
+    justify-content: center !important;
+  }
+
+  .stats-col .circle {
+    width: 160px !important;
+    height: 160px !important;
+    padding: 45px 15px 0 15px;
+  }
+
+  p.pile-flip {
+    width: 148px;
+    height: 148px;
   }
 }
 
@@ -1011,7 +1124,7 @@ img.robinet-mid-section {
   --------------------------------------------------------------*/
 .stats-row {
   margin-top: 65px;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .stats-col .circle {
@@ -1059,9 +1172,67 @@ img.robinet-mid-section {
   margin: 0;
 }
 
+@media (min-width: 993px) {
+  #portfolio:hover .h3_cta {
+    transform: scale(1.1);
+  }
+}
+
 @media (max-width: 992px) {
   .breadcrumbs h2 {
     margin: 0 0 10px 0;
+  }
+
+  .home .stats-row .stats-col {
+    margin-bottom: 25px;
+    width: 50% !important;
+  }
+
+  .home .welcome {
+    height: auto;
+  }
+
+  .home img.robinet-mid-section {
+    width: 330px;
+  }
+
+  .single-realisations section#travaux {
+    height: auto;
+  }
+
+  .pagination_single .container {
+    margin: 60px auto 30px auto;
+  }
+
+  section#travaux .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .slider_real {
+    margin-bottom: 70px;
+  }
+
+  .single-realisations .blockSlideReal {
+    float: inherit;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .single-realisations button.slick-prev.slick-arrow {
+    left: 5px;
+    bottom: -30px;
+    width: 130px;
+  }
+
+  .single-realisations button.slick-next.slick-arrow {
+    right: 4px;
+    bottom: -30px;
+    width: 130px;
+  }
+
+  .single-realisations .slider__item__real {
+    max-height: 390px;
   }
 }
 
@@ -1096,6 +1267,28 @@ img.robinet-mid-section {
 
   .breadcrumbs ol li {
     display: inline-block;
+  }
+
+  .home .portfolio-grid .card {
+    height: 160px;
+  }
+
+  .home .row.cta-flex-home .btn-ghost {
+    border: 2px solid #fff;
+    padding: 10px 15px;
+    margin-top: 30px;
+  }
+
+  .btn {
+    padding: 10px 45px;
+  }
+
+  .home .content-hero-left {
+    margin-bottom: 50px;
+  }
+
+  .home .welcome {
+    background: url("/wp-content/uploads/2023/01/parallax-bg.jpg") center top repeat;
   }
 }
 
@@ -1200,9 +1393,6 @@ img.robinet-mid-section {
   text-align: right;
   text-decoration: underline;
   transition: .3s ease-in-out;
-}
-#portfolio:hover .h3_cta {
-  transform: scale(1.1);
 }
 
 /* ==================================================
@@ -1809,7 +1999,7 @@ img.robinet-mid-section {
     height: 100vh;
     float: none;
     position: absolute;
-    background: #000000db;
+    background: #000000;
     top: 70px;
     left: -300px;
     padding-top: 30px;
@@ -1826,6 +2016,12 @@ img.robinet-mid-section {
     margin: 5px 0px;
     display: block;
   }
+
+  .page-content-realisations .hero-globale-page,
+  section.hero-globale-page-single {
+    height: 130px !important;
+    margin-top: 0px !important;
+  }
 }
 
 /* Tablette standart */
@@ -1836,5 +2032,129 @@ img.robinet-mid-section {
   nav.menuHeader {
     width: 100%;
     left: -100%;
+  }
+
+  .home section#prestations h2,
+  .home section#prestations p,
+  .home section#portfolio h2,
+  .home section#portfolio p,
+  .home section#portfolio a,
+  .home section#portfolio h3,
+  .home section.cta .cta-flex-home h2,
+  .home section.cta .cta-flex-home a,
+  .home section.cta .text-center,
+  section#les-tarifs H2,
+  section#les-tarifs p {
+    text-align: left !important;
+  }
+
+  .home .stats-col .circle .stats-no {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    top: -35px;
+    right: 0px;
+    font-weight: 100;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home .stats-row {
+    justify-content: start !important;
+  }
+
+  .home .stats-col .circle {
+    width: 140px !important;
+    height: 140px !important;
+    padding: 45px 15px 0 15px;
+    font-size: 14px;
+  }
+
+  .home p.pile-flip {
+    width: 128px;
+    height: 128px;
+  }
+
+  .home a.tarif-call {
+    text-align: center;
+  }
+
+  .portfolio-grid .row>div .card .portfolio-over {
+    background: rgb(0 0 0 / 38%);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .container.content-single-real {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .single-realisations .thumb-single-real {
+    height: 290px;
+  }
+
+  .single-realisations .thumb-single-real .description {
+    width: 100%;
+    padding: 30px 15px;
+  }
+
+  .single-realisations .thumb-single-real .description p {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  #free-content .content-description {
+    background: #dee2e6;
+    padding: 30px 15px;
+  }
+
+  #free-content {
+    padding: 15px 0px;
+    background: #dee2e6;
+  }
+
+  .single-realisations .blockSlideReal {
+    width: 100%;
+  }
+
+  .single-realisations .hero-globale-page-single {
+    min-height: auto;
+    height: auto !important;
+    padding: 0;
+    padding: 30px 0px;
+  }
+
+  .single-realisations .thumb-single-real .description p {
+    font-size: 16px;
+  }
+
+  .single-realisations button.slick-next.slick-arrow {
+    right: 5px;
+  }
+
+  .single-realisations .slider__item__real {
+    max-height: 270px;
+  }
+
+  .single-realisations .content-single-real {
+    margin: 0px auto;
+  }
+
+  /* Menu */
+  ul#menu-menu-principale {
+    padding-left: 0;
+  }
+
+  ul#menu-menu-principale li {
+    border-bottom: solid 1px #ffffff;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  ul#menu-menu-principale li a {
+    text-align: center;
   }
 }

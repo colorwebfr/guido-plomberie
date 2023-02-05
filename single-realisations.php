@@ -18,7 +18,7 @@
                         <p><?= get_field('description_de_la_realisation'); ?></p><br>
                         <?php if (get_field('photos_avant_1') && get_field('photos_apres_1')) : ?>
                             <p class="btn-see-aft-bfr">Avant / Après<br>
-                                <a href="#travaux"><i class="fa-solid fa-angle-down"></i></a>
+                                <a href="#travaux"><i class="fa-solid fa-angle-down"></i></a>get_field('description_de_la_realisation')
                             </p>
                         <?php endif; ?>
                     </div>
