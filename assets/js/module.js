@@ -103,3 +103,12 @@ export const redirect_after_submit = () => {
         }, 3000);
     }, false);
 }
+
+//Redirection CF7 on Home after submit
+export const redirect_after_submit_home = () => {
+    setTimeout(function () {
+        document.addEventListener('wpcf7mailsent', function (event) {
+            location = 'https://www.plomberie-guido.fr';
+        }, false);
+    }, 5000);
+}

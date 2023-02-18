@@ -1,25 +1,29 @@
 <?php get_header(); ?>
 
+<?php
+$tel_global_texte = get_field('texte_call_to_action_tel') ? get_field('texte_call_to_action_tel') : '+33 619 387 998';
+$tel_global_num = get_field('numero_de_telephone') ? get_field('numero_de_telephone') : '+33619387998';
+$hero_visuel = get_field('image_de_fond_du_hero') ? get_field('image_de_fond_du_hero') : '/wp-content/uploads/2023/01/vasque-de-cuisine.jpg';
+?>
 <!-- ======= Hero Section ======= -->
-<section id="hero" class="hero">
+<section id="hero" class="hero" style="background-image: url(<?= $hero_visuel; ?>);">
     <div class="container text-left">
         <div class="row">
             <div class="col-md-6 col-xs-12">
                 <div class="content-hero-left">
                     <h1>
-                        GUIDO PLOMBERIE
+                        <?= get_field('titre_principale') ? get_field('titre_principale') : 'GUIDO PLOMBERIE'; ?>
                     </h1>
-                    <a class="tel-hero-home" href="tel:+33619387998"><i class="fa-solid fa-phone"></i> +33 619 387 998</a>
+                    <a class="tel-hero-home" href="tel:<?= $tel_global_num; ?>"><i class="fa-solid fa-phone"></i> <?= $tel_global_texte; ?></a>
                     <p class="tagline">
-                        Dépannage, création, <br>installation, conseils, <br>recherche de fuite ...<br>
-                        Contactez Guido Plomberie !
+                        <?= get_field('description_courte_hero'); ?>
                     </p>
-                    <a class="btn btn-full scrollto" href="#prestations">Voir les prestations</a>
+                    <a class="btn btn-full scrollto" href="#prestations"><?= get_field('texte_call_to_action_hero_voir_les_prestations'); ?></a>
                 </div>
             </div>
             <div class="col-md-6 col-xs-12">
                 <div id="contact-form" class="content-hero-right">
-                    <h2>Devis - Informations</h2>
+                    <h2><?= get_field('titre_call_to_action_devis'); ?></h2>
                     <?= do_shortcode('[contact-form-7 id="14" title="Demander un devis"]'); ?>
                 </div>
             </div>
@@ -32,87 +36,46 @@
 
     <div class="container text-center">
         <h2>
-            Les services Guido plomberie
+            <?= get_field('titre_section_2'); ?>
         </h2>
-        <p>Vous avez besoin d'un devis, un conseil ou vous avez une urgence ?<br>Guido plomberie intervient sur tous le bassins niçois et alentours !</p>
+        <p><?= get_field('description_section_2'); ?></p>
         <div class="row stats-row">
-            <div class="stats-col text-center col-md-2 col-sm-6">
-                <div class="circle p-relative">
-                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-sink"></i></span></a>
-                    Installation & remplacement
-                    <p class="pile-flip">
-                        <a href="#les-tarifs" class="tarif-call">Voir les tarifs</a>
-                        <a href="tel:+33619387998" class="tarif-call">Appeler</a>
-                    </p>
+            <?php for ($i = 1; $i <= 5; $i++) : ?>
+                <!-- Flip card -->
+                <div class="stats-col text-center col-md-2 col-sm-6">
+                    <div class="circle p-relative">
+                        <a class="C_White" href="tel:<?= $tel_global_num; ?>"><span class="stats-no"><i class="fa-solid fa-phone"></i></span></a>
+                        <?= get_field('titre_pastille_' . $i) ? get_field('titre_pastille_' . $i) : ''; ?>
+                        <p class="pile-flip">
+                            <a href="#les-services" class="tarif-call"><?= get_field('text_call_to_action_voir_les_tarifs'); ?></a>
+                            <a href="tel:<?= $tel_global_num; ?>" class="tarif-call d-none-mobile"><?= get_field('texte_call_to_action_appeler'); ?></a>
+                        </p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="stats-col text-center col-md-2 col-sm-6">
-                <div class="circle p-relative">
-                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-faucet-drip"></i></span></a>
-                    Recherche de fuites
-                    <p class="pile-flip">
-                        <a href="#les-tarifs" class="tarif-call">Voir les tarifs</a>
-                        <a href="tel:+33619387998" class="tarif-call">Appeler</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="stats-col text-center col-md-2 col-sm-6">
-                <div class="circle p-relative">
-                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-screwdriver-wrench"></i></span></a>
-                    Débouchages & dépannages
-                    <p class="pile-flip">
-                        <a href="#les-tarifs" class="tarif-call">Voir les tarifs</a>
-                        <a href="tel:+33619387998" class="tarif-call">Appeler</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="stats-col text-center col-md-2 col-sm-6">
-                <div class="circle p-relative">
-                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-bath"></i></span></a>
-                    Robineteries, Chauffe eau, Cumulus
-                    <p class="pile-flip">
-                        <a href="#les-tarifs" class="tarif-call">Voir les tarifs</a>
-                        <a href="tel:+33619387998" class="tarif-call">Appeler</a>
-                    </p>
-                </div>
-            </div>
-
-            <div class="stats-col text-center col-md-2 col-sm-6">
-                <div class="circle p-relative">
-                    <a class="C_White" href="tel:+33619387998"><span class="stats-no"><i class="fa-solid fa-shower"></i></span></a>
-                    Robineteries, Chauffe eau, Cumulus
-                    <p class="pile-flip">
-                        <a href="#les-tarifs" class="tarif-call">Voir les tarifs</a>
-                        <a href="tel:+33619387998" class="tarif-call">Appeler</a>
-                    </p>
-                </div>
-            </div>
+            <?php endfor; ?>
         </div>
     </div>
 
 </section><!-- End About Section -->
 
 <!-- ======= Welcome Section ======= -->
+<?php
+$visuel_sect3_ID = get_field('visuel_section_3');
+$visuel_sect3 = wp_get_attachment_image_src($visuel_sect3_ID, 'full')[0];
+$visuel_sect3_ALT = get_post_meta($visuel_sect3_ID, '_wp_attachment_image_alt')[0];
+?>
 <section class="welcome text-left">
     <div class="container">
         <div class="row">
             <div class="col-md-6 col-xs-12">
                 <div class="content-about-home-L">
-                    <h2>Qui sommes nous ?</h2>
-                    <p>Guido Plomberie est une entreprise de plomberie experte en dépannage, création, débouchage, recherche de fuite et installations diverses ( bac à douche, baignoire, robinetteries, cumulus, chauffe eau ...).<br>
-                        Guido plomberie opère sur tout le secteur des Alpes Maritimes.<br>
-                        C'est une société très attaché à la notion de qualité de travail et de satisfaction du client car c'est un métier de service et de passion.</p>
-                    <p>
-                        Que ce soit pour une demande de devis, un conseil ou une urgence. N'hésitez pas à nous contacter, nous serons toujours contents de pouvoir vous aider
-                    </p>
+                    <h2><?= get_field('titre_section_3'); ?></h2>
+                    <?= get_field('description_section_3'); ?>
                 </div>
             </div>
             <div class="col-md-6 col-xs-12">
                 <div class="content-about-home-R">
-                    <img alt="Robineterie Guido Jim" class="robinet-mid-section" src="/wp-content/uploads/2023/01/Robineterie.png">
+                    <img alt="<?= $visuel_sect3_ALT; ?>" class="robinet-mid-section" src="<?= $visuel_sect3; ?>">
                 </div>
             </div>
         </div>
@@ -122,12 +85,9 @@
 <!-- ======= Portfolio Section ======= -->
 <section class="portfolio" id="portfolio">
     <div class="container text-center">
-        <h2>
-            Quelques réalisations
-        </h2>
-        <p>Au delà de l'utile, mon métier me permet de réaliser et concevoir des pièces d'eaux aussi pratique qu'agréable à vivre<br>
-            et la satisfaction du client est un vrai moteur dans mon métier.</p><br>
-        <h3 class="h3_cta"><a href="<?= home_url() . '/realisations'; ?>">Voir toutes les réalisations <i class="fa-solid fa-angle-right"></i></a></h3>
+        <h2><?= get_field('titre_de_la_section_4'); ?></h2>
+        <p><?= get_field('description_de_la_section_4'); ?></p><br>
+        <h3 class="h3_cta"><a href="<?= home_url() . '/realisations'; ?>"><?= get_field('texte_du_call_to_actio_section_4'); ?> <i class="fa-solid fa-angle-right"></i></a></h3>
     </div>
 
     <div class="portfolio-grid">
@@ -163,6 +123,7 @@
                         </div>
                     </div>
                 <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
             <?php endif; ?>
         </div>
     </div>
@@ -173,78 +134,44 @@
     <div class="container">
         <div class="row cta-flex-home">
             <div class="col-lg-9 col-sm-12 text-lg-start text-center">
-                <h2>
-                    Vous avez besoins d'un devis pour une réalisation
-                </h2>
+                <h2><?= get_field('texte_call_to_action_besoins_dun_devis'); ?></h2>
             </div>
 
             <div class="col-lg-3 col-sm-12 text-lg-right text-center">
-                <a class="btn btn-ghost" href="#contact-form">contactez</a>
+                <a class="btn btn-ghost" href="#contact-form"><?= get_field('texte_bouton_besoins_dun_devis'); ?></a>
             </div>
         </div>
     </div>
 </section><!-- End Call to Action Section -->
 
 <!-- Section  tarif -->
-<section class="tarif-home" id="les-tarifs">
+<section class="tarif-home" id="les-services">
     <div class="container">
-        <h2 class="text-center">Nos tarifs en toute transparence</h2><br>
-        <p class="text-center">Les tarifs des services et prestations de plomberie dépendent de plusieurs facteurs (le lieu de l'intervention, les possibles complications liées à la vétusté du logement, une demande personnaliser etc...).
-            C'est pour toutes ces raisons et par soucis de transparence que les tarifs mentionnés plus bas sont des tarifs de base afin de donner des indications sur le coût d'une prestation courante.
+        <h2 class="text-center"><?= get_field('titre_section_5'); ?></h2><br>
+        <p class="text-center">
+            <?= get_field('description_section_5'); ?>
         </p>
     </div><br>
     <div class="container">
         <div class="row card-deck mb-3 text-center">
-
-            <div class="col-md-4 col-xs-12 mb-4 box-shadow card-price position-relative">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Dépannage - Urgence</h4>
+            <?php for ($c = 1; $c <= 3; $c++) : ?>
+                <!-- Carte service -->
+                <div class="col-md-4 col-xs-12 mb-4 box-shadow card-price position-relative">
+                    <div class="card-header">
+                        <h4 class="my-0 font-weight-normal"><?= get_field('titre_carte_information_' . $c) ? get_field('titre_carte_information_' . $c) : ''; ?></h4>
+                    </div>
+                    <div class="card-body text-left">
+                        <h5 class="card-title pricing-card-title bold">
+                            <?= get_field('prix_carte_' . $c) ? get_field('prix_carte_' . $c) : ''; ?>
+                            <small class="text-muted"><?= get_field('base_temps_carte_' . $c) ? get_field('base_temps_carte_' . $c) : ''; ?></small>
+                        </h5>
+                        <ul class="list-unstyled mt-3 mb-4">
+                            <?= get_field('liste_carte_' . $c) ? get_field('liste_carte_' . $c) : ''; ?>
+                        </ul>
+                        <a class="btn-globale-2" href="tel:<?= $tel_global_num; ?>"><?= $tel_global_texte; ?></a>
+                    </div>
                 </div>
-                <div class="card-body text-left">
-                    <h5 class="card-title pricing-card-title bold">€50 <small class="text-muted">/ Heure</small></h5>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>Dégât des eaux</li>
-                        <li>Débouchage</li>
-                        <li>Fuite de cumulus</li>
-                        <li>Remplacement chasse d'eau (WC)</li>
-                        <li>Remplacement robinetterie ...</li>
-                    </ul>
-                    <a class="btn-globale-2" href="tel:+33619387998">+33 619 387 998</a>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-xs-12 mb-4 box-shadow card-price position-relative">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Installation - Remplacement</h4>
-                </div>
-                <div class="card-body text-left">
-                    <h5 class="card-title pricing-card-title bold">€50 <small class="text-muted">/ Heure</small></h5>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>Cumulus</li>
-                        <li>Chauffe-eau</li>
-                        <li>W.C, lavabo, evier</li>
-                        <li>Bac à douche, Baignoire ...</li>
-                    </ul>
-                    <a class="btn-globale-2" href="#contact-form">contactez</a>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-xs-12 mb-4 box-shadow card-price position-relative">
-                <div class="card-header">
-                    <h4 class="my-0 font-weight-normal">Refontes - Créations</h4>
-                </div>
-                <div class="card-body text-left">
-                    <h5 class="card-title pricing-card-title bold">€50 <small class="text-muted">/ Heure</small></h5>
-                    <ul class="list-unstyled mt-3 mb-4">
-                        <li>Salle de bain</li>
-                        <li>Cuisine</li>
-                        <li>Toilette</li>
-                        <li>Salle d'eau</li>
-                    </ul>
-                    <a class="btn-globale-2" href="#contact-form">contactez</a>
-                </div>
-            </div>
-
+            <?php endfor; ?>
         </div>
     </div>
 </section>

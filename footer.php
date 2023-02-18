@@ -57,9 +57,9 @@
                         <div class="content-sup-foot">
                             <h3>Infos légales</h3>
                             <ul>
-                                <li><a href="#">Mentions légales</a></li>
-                                <li><a href="#">Politiques de confidentialités</a></li>
-                                <li><a href="#">Gestion des Cookies</a></li>
+                                <li><a href="<?= get_the_permalink(3) . '#mentions-legales'; ?>">Mentions légales</a></li>
+                                <li><a href="<?php the_permalink(3); ?>">Politiques de confidentialités</a></li>
+                                <li><a href="<?= get_the_permalink(3) . '#infos-coockies'; ?>">Gestion des Cookies</a></li>
                                 <li><a href="mailto:mon-mail@exemple.fr">mon-mail@exemple.fr</a></li>
                                 <li><a href="tel:+33619387998">+336 193 879 98</a></li>
                             </ul>
@@ -80,10 +80,12 @@
     <script type="module">
         import {
             popinContact,
-            redirect_after_submit
+            redirect_after_submit,
+            redirect_after_submit_home
         } from '<?= get_template_directory_uri() . '/assets/js/module.js'; ?>';
         popinContact();
         redirect_after_submit();
+        redirect_after_submit_home();
     </script>
 
     </body>
